@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stage 0 Task: Accessible Responsive Profile Card Component" />
+    <title>Stage 0 - Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main>
+      <!-- Profile Card Component -->
+      <article
+        class="profile-card"
+        data-testid="test-profile-card"
+        aria-label="User Profile Card"
+      >
+        <!-- Avatar Section -->
+        <figure class="avatar-wrapper">
+          <img
+            src="https://i.pravatar.cc/200"
+            alt="Portrait of Samuel Osoba"
+            data-testid="test-user-avatar"
+          />
+          <figcaption class="visually-hidden">Samuel Osoba's Avatar</figcaption>
+        </figure>
+
+        <!-- User Details Section -->
+        <section class="profile-details">
+          <header>
+            <h2 data-testid="test-user-name" tabindex="0">Samuel Osoba</h2>
+          </header>
+
+          <p data-testid="test-user-bio" class="bio-text">
+            I'm a passionate frontend developer dedicated to building modern,
+            accessible, and user-focused web experiences. I love solving
+            real-world problems through clean design and thoughtful code.
+          </p>
+
+          <p class="time" aria-live="polite">
+            Current Time in Milliseconds:
+            <span id="current-time" data-testid="test-user-time"></span>
+          </p>
+
+          <!-- Social Links -->
+          <nav aria-label="User Social Links">
+            <ul
+              class="social-links"
+              data-testid="test-user-social-links"
+              role="list"
+            >
+              <li>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-twitter"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-github"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid="test-user-social-linkedin"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Hobbies List -->
+          <section aria-labelledby="hobbies-heading">
+            <h3 id="hobbies-heading">Hobbies</h3>
+            <ul data-testid="test-user-hobbies">
+              <li>Coding</li>
+              <li>Football</li>
+              <li>Photography</li>
+              <li>Exploring Tech Trends</li>
+            </ul>
+          </section>
+
+          <!-- Dislikes List -->
+          <section aria-labelledby="dislikes-heading">
+            <h3 id="dislikes-heading">Dislikes</h3>
+            <ul data-testid="test-user-dislikes">
+              <li>Procrastination</li>
+              <li>Bad coffee</li>
+              <li>Unclear communication</li>
+              <li>Noise</li>
+            </ul>
+          </section>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
